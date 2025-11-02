@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICF キャラクター機能パラメータ - ステータス画面</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1 class="title">ICF Character Parameters</h1>
+            <div class="subtitle">国際生活機能分類 - ゲーム応用システム</div>
+        </header>
+
+        <!-- メインコンテンツエリア -->
+        <div class="content-wrapper">
+            <!-- 左側: ナビゲーション -->
+            <div class="navigation-panel">
+                <div class="nav-header">
+                    <h2>機能分類</h2>
+                </div>
+                
+                <!-- ドメイン選択 -->
+                <div class="nav-section">
+                    <h3>ドメイン</h3>
+                    <div class="nav-list" id="domain-list">
+                        <!-- JavaScriptで動的に生成 -->
+                    </div>
+                </div>
+
+                <!-- カテゴリー選択 -->
+                <div class="nav-section" id="category-section" style="display: none;">
+                    <h3>カテゴリー</h3>
+                    <div class="nav-list" id="category-list">
+                        <!-- JavaScriptで動的に生成 -->
+                    </div>
+                </div>
+
+                <!-- コード選択 -->
+                <div class="nav-section" id="code-section" style="display: none;">
+                    <h3>コード</h3>
+                    <div class="nav-list" id="code-list">
+                        <!-- JavaScriptで動的に生成 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右側: 詳細表示 -->
+            <div class="details-panel">
+                <div class="details-header">
+                    <h2>機能詳細</h2>
+                </div>
+                
+                <div class="details-content" id="details-content">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">⚡</div>
+                        <h3>ICF キャラクター機能パラメータ システム</h3>
+                        <p>左側のナビゲーションから<br>ドメイン → カテゴリー → コード<br>の順に選択してください</p>
+                        <div class="welcome-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">総ドメイン数</span>
+                                <span class="stat-value" id="total-domains">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">総カテゴリー数</span>
+                                <span class="stat-value" id="total-categories">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">総コード数</span>
+                                <span class="stat-value" id="total-codes">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer-text">
+                Based on International Classification of Functioning, Disability and Health (ICF)
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
